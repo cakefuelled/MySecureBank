@@ -8,6 +8,5 @@ import Main from './pages/Main';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Main} />
-    //<Route path="posts/new" component={PostsNew} />
   </Route>
 );

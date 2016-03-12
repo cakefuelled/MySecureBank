@@ -7,11 +7,11 @@ class Header extends Component {
         router: PropTypes.object
     };
 
-    componentWillMount() {
+    /*componentWillMount() {
         //Important! If your component is navigating based on some global state(from say componentWillReceiveProps)
         //always reset that global state back to null when you REMOUNT
         this.props.resetMe();
-    }
+    }*/
 
     componentWillReceiveProps(nextProps) {
         if(nextProps.deletedPost.error) {
@@ -23,34 +23,15 @@ class Header extends Component {
 
     renderLinks() {
         const { type } = this.props;
-        if(type === 'posts_index') {
+        if(type === 'main') {
             return (
                 <ul className="nav navbar-nav navbar-right">
                     <li style={{paddingRight: '20px'}} role="presentation">
-                        <Link style={{color:'#3385ff',  fontSize: '18px'}} to="/posts/new">
-                            Demo
+                        <Link style={{color:'#3385ff',  fontSize: '18px'}} to="/">
+                            Home
                         </Link>
                     </li>
                 </ul>
-            );
-        } else if(type === 'posts_new') {
-            return (
-                <ul className="nav navbar-nav navbar-right">
-                    <li style={{paddingRight: '10px'}} role="presentation">
-                        <Link className="text-xs-right" to="/">Back To Index</Link>
-                    </li>
-                </ul>
-            );
-        } else if(type === 'posts_show') {
-            return (
-                <span>
-                    <ul className="nav navbar-nav navbar-left">
-                        <li style={{paddingRight: '20px'}} role="presentation"><Link to="/">Back To Index</Link></li>
-                    </ul>
-                    <div className="navbar-form navbar-right" style={{paddingRight: '30px'}}>
-                        <button className="btn btn-warning pull-xs-right"  onClick={()=> {this.props.onDeleteClick()}}>Delete Post</button>
-                    </div>
-                </span>
             );
         }
     };

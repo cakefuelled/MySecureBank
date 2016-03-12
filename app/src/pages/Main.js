@@ -5,7 +5,7 @@ class Main extends Component {
     render() {
         return (
             <div className='container'>
-                <Header type="posts_index"/>
+                <Header type="main"/>
                 This would be the app
             </div>
         );
