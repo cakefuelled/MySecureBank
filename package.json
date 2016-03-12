@@ -1,0 +1,25 @@
+{
+  "name": "mysecurebank",
+  "version": "0.0.1",
+  "description": "Web application that shows the most common web vulnerabilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cakefuelled/MySecureBank.git"
+  },
+  "author": "CakeFuelled Code",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/cakefuelled/MySecureBank/issues"
+  },
+  "homepage": "https://github.com/cakefuelled/MySecureBank#readme",
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "lodash": "^4.6.1",
+    "moment": "^2.12.0",
+    "react": "^0.14.7"
+  }
+}
