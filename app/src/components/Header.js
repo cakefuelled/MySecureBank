@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 
 class Header extends Component {
@@ -21,28 +22,26 @@ class Header extends Component {
         }
     }
 
-    renderLinks() {
-        const { type } = this.props;
-        if(type === 'main') {
-            return (
-                <ul className="nav navbar-nav navbar-right">
-                    <li style={{paddingRight: '20px'}} role="presentation">
-                        <Link style={{color:'#3385ff',  fontSize: '18px'}} to="/">
-                            Home
-                        </Link>
-                    </li>
-                </ul>
-            );
-        }
-    };
-
     render() {
         return (
-            <nav className="navbar navbar-default navbar-static-top">
-                <div id="navbar" className="navbar-collapse collapse">
-                    {this.renderLinks()}
-                </div>
-            </nav>
+        <Navbar>
+            <Navbar.Header>
+                <Navbar.Brand>
+                    <a href="#">MySecureBank</a>
+                </Navbar.Brand>
+            </Navbar.Header>
+            <Nav>
+                <NavItem eventKey={1} href="#">Link</NavItem>
+                <NavItem eventKey={2} href="#">Link</NavItem>
+                <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+                    <MenuItem eventKey={3.1}>Action</MenuItem>
+                    <MenuItem eventKey={3.2}>Another action</MenuItem>
+                    <MenuItem eventKey={3.3}>Something else here</MenuItem>
+                    <MenuItem divider />
+                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                </NavDropdown>
+            </Nav>
+        </Navbar>
         );
     }
 }
