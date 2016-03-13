@@ -29041,11 +29041,6 @@
 	                'div',
 	                null,
 	                _react2.default.createElement(_Header2.default, { type: 'main' }),
-	                _react2.default.createElement(
-	                    'h1',
-	                    null,
-	                    'Welcome to MySecureBank'
-	                ),
 	                this.props.children
 	            );
 	        }
@@ -46167,6 +46162,11 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'container' },
+	                _react2.default.createElement(
+	                    'h1',
+	                    null,
+	                    'Page 1'
+	                ),
 	                'This would be the app'
 	            );
 	        }

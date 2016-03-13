@@ -7,7 +7,6 @@ export default class App extends Component {
         return (
             <div>
                 <Header type="main"/>
-                <h1>Welcome to MySecureBank</h1>
                 {this.props.children}
             </div>
         );
