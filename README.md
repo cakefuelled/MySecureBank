@@ -5,7 +5,7 @@ MySecureBank is a website that offers a demo of web application vulnerabilities
 
 ```sh
 $ npm install
-$ npm build dev
+$ npm run dev
 ```
 
 Then browse to [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/) and you should see the app.
