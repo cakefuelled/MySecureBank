@@ -4,7 +4,7 @@
   "description": "Web application that shows the most common web vulnerabilities",
   "main": "index.js",
   "scripts": {
-    "build": "node node_modules/.bin/webpack",
+    "build": "node node_modules/.bin/webpack -d",
     "dev": "webpack-dev-server"
   },
   "repository": {
